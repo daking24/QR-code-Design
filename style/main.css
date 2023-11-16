@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --COLOR-WHITE: hsl(0, 0%, 100%);
+  --COLOR-LIGHT-GRAY: hsl(212, 45%, 89%);
+  --COLOR-GREY-BLUE: hsl(220, 15%, 55%);
+  --COLOR-DARK-BLUE: hsl(218, 44%, 22%);
+
+  /* FONT */
+  --FONT-SIZE: 15px;
+  --FONT-FAMILY: 'Outfit', san-serif;
+  --FONT-WEIGHT-BIG: 700;
+  --FONT-WEIGHT-SMALL: 400;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--COLOR-LIGHT-GRAY);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--FONT-FAMILY);
+  font-size: var(--FONT-SIZE);
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 4rem 1.5rem; */
+  /* justify-content: center; */
+  /* justify-items: center; */
+}
+
+.card {
+  width: min(100%, 350px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 10px 0px #5e5e5e5e;
+}
+
+
+.card__image-figure img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: .5rem;
+}
+
+.card__header {
+  font-weight: var(--FONT-WEIGHT-BIG);
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--COLOR-DARK-BLUE);
+}
+
+.card__subheader{
+  font-weight: var(--FONT-WEIGHT-SMALL);
+  text-align: center;
+  color: var(--COLOR-GREY-BLUE);
+}
+
+footer {
+  content-visibility: hidden;
+}
+
+/* || MOBILE */
+@media screen and (max-width: 375px){
+  main{
+    padding: 0 1.5rem;
+  }
+}
